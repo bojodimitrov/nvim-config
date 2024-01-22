@@ -25,4 +25,9 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   pattern = '*',
 })
 
+-- Custom remaps
+vim.keymap.set('v', '<leader>p', "\"_dP")
+vim.keymap.set('n', 'J', "20j")
+vim.keymap.set('n', 'K', "20k")
+
 -- vim: ts=2 sts=2 sw=2 et
