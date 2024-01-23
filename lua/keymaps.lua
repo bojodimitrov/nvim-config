@@ -26,8 +26,12 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 -- Custom remaps
-vim.keymap.set('v', '<leader>p', "\"_dP")
+-- vim.keymap.set('v', '<leader>p', "\"_dP")
+vim.keymap.set('n', '<leader>p', "\"0p")
+vim.keymap.set('n', '<leader>P', "\"0P")
 vim.keymap.set('n', 'J', "20j")
 vim.keymap.set('n', 'K', "20k")
+vim.keymap.set('n', '<C-d>', "<C-d>zz")
+vim.keymap.set('n', '<C-u>', "<C-u>zz")
 
 -- vim: ts=2 sts=2 sw=2 et
