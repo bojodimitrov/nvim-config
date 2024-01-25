@@ -50,6 +50,9 @@ vim.keymap.set('n', '<C-u>', "<C-u>zz")
 vim.keymap.set('n', 'n', "nzzzv")
 vim.keymap.set('n', 'N', "Nzzzv")
 
+vim.keymap.set('n', 'mh', "<C-w>h")
+vim.keymap.set('n', 'ml', "<C-w>l")
+
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 -- vim: ts=2 sts=2 sw=2 et
