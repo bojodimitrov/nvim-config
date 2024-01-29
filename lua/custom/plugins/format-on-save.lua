@@ -16,7 +16,7 @@ return {
 
       formatter_by_ft = {
         css = formatters.lsp,
-        html = formatters.lsp,
+        html = formatters.prettierd,
         javascript = formatters.lsp,
         json = formatters.lsp,
         lua = formatters.lsp,
