@@ -6,12 +6,26 @@ return {
 
     null_ls.setup {
       sources = {
+        -- formatting
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettierd.with {
           filetypes = { 'html', 'json', 'js', 'ts', 'jsx', 'tsx', 'yaml', 'markdown' },
         },
         null_ls.builtins.formatting.black,
-        null_ls.builtins.diagnostics.eslint_d,
+
+        -- diagnostics
+        null_ls.builtins.diagnostics.eslint_d.with {
+          condition = function(utils)
+            return utils.root_has_file { '.eslintrc.js', '.eslintrc.cjs', '.eslintrc.json' }
+          end,
+        },
+
+        -- code_actions
+        null_ls.builtins.code_actions.eslint_d.with {
+          condition = function(utils)
+            return utils.root_has_file { '.eslintrc.js', '.eslintrc.cjs', '.eslintrc.json' }
+          end,
+        },
       },
     }
 
