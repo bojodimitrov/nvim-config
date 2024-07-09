@@ -3,10 +3,13 @@ return {
 
   config = function()
     local null_ls = require 'null-ls'
+    local h = require("null-ls.helpers")
+    local u = require("null-ls.utils")
 
     null_ls.setup {
       sources = {
         -- formatting
+        null_ls.builtins.formatting.csharpier,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.prettierd.with {
           filetypes = { 'html', 'json', 'js', 'ts', 'jsx', 'tsx', 'yaml', 'markdown' },
@@ -28,6 +31,8 @@ return {
         },
       },
     }
+
+
 
     vim.keymap.set('n', '<leader>gf', vim.lsp.buf.format, {})
   end,

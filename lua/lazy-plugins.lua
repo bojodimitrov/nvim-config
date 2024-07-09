@@ -127,6 +127,7 @@ require('lazy').setup({
     },
   },
 
+
   {
     'jiangmiao/auto-pairs',
   },
@@ -151,7 +152,16 @@ require('lazy').setup({
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      indent = { highlight = hightlight, char = " " },
+      scope = {
+        enabled = true,
+        char = ".",
+        show_start = false,
+        show_exact_scope = true,
+        show_end = false
+      }
+    },
   },
 
   -- "gc" to comment visual regions/lines
